@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="./assets/img/icone.png" type="image/x-icon">
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js" defer></script>
+    <script src="./assets/js/app.js" defer></script>
+    <title>Cinéfil - Mes favoris</title>
+</head>
+
+<body>
+    <header>
+
+        <!-- Barre de navigation -->
+
+        <nav class="navbar navig navbar-expand-lg bg-light mb-4" aria-label="Fifth navbar example">
+            <div class="container-fluid navbar-brand ">
+                <a class="" href="#"><img src="./assets/img/logo.png" alt="Logo cinéfil"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mb-lg-0 text-center">
+                        <li class="nav-item">
+                            <a class="page1 nav-link" aria-current="page" href="#">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="page1 nav-link active" href="#">Mes favoris</a>
+                        </li>
+                        <li class="nav-item pe-2">
+                            <a class="page1 nav-link" href="index2.html">Parcourir</a>
+                        </li>
+                        <li><button type="button" class="btn mt-1">Mon compte</button></li>
+                        <li><button type="button" class="btn mt-1 ms-3 me-3">M'inscrire</button></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <!-- Partie centrale avec tableau, formulaire et tri -->
+        
+        <section id="page">
+            <h3 class=" mb-5 text-center text-primary display-3">Vos films favoris</h3>
+            <p class="text-light mb-4">Ajoutez tous vos films préférés à votre liste de favoris en quelques clics !</p>
+            <select name="tri" id="tri">
+                <option value="null">Trier par</option>
+                <option value="nom">Nom</option>
+                <option value="age">Date</option>
+            </select>
+            <section class="tabl">
+                <table class="table text-light table-striped table-hover text-center mt-5">
+                    <thead class="container fluid">
+                        <tr>
+                            <th class="align-middle">Titre du film</th>
+                            <th class="align-middle">Année de sortie</th>
+                            <th class="align-middle">Réalisateur</th>
+                            <th class="supp"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableau">
+
+                    </tbody>
+                </table>
+            </section>
+            <div class="text-center">
+                <button type="button" id="ajouter" class="btn">Ajouter un film</button>
+            </div>
+            <form id="ajout" class="text-center m-5 mx-auto">
+                <input type="text" id="titre" placeholder="Titre" class="mx-1">
+                <input type="text" id="date" placeholder="Année de sortie" class="mx-1">
+                <input type="text" id="real" placeholder="Réalisateur" class="mx-1">
+                <button type="button" id="valider" class="btn">Valider</button>
+            </form>
+            <p class="text-light mt-2 text-center">Vous cherchez des informations sur un film, une série ou un jeu ? <br> 
+                Cliquez <a href="index2.html">ici</a> ou rendez-vous dans notre onglet Parcourir! </p>
+        </section>
+        
+
+        <!-- Section gauche qui disparait en mode téléphone -->
+
+        <article id="gche" class="row p-2 justify-content-center">
+            <h5 class="text-center">A l'affiche</h5>
+            <img class="col-lg-6 col-md-1 p-1" src="./assets/img/asterix.jpg" alt="asterix" />
+            <img class="col-lg-6 col-md-1 p-1" src="./assets/img/avatar.jpg" alt="avatar" />
+            <img class="col-lg-6 col-md-1 p-1" src="./assets/img/babylon.jpg" alt="babylon" />
+            <img class="col-lg-6 col-md-1 p-1" src="./assets/img/chatpo.jpg" alt="chat potté" />
+            <img class="col-lg-6 col-md-1 p-1" src="./assets/img/mayday.jpg" alt="mayday" />
+            <img class="col-lg-6 col-md-1 p-1" src="./assets/img/neneh.jpg" alt="neneh" />
+            <img class="col-lg-6 col-md-1 p-1" src="./assets/img/pattie.jpg" alt="pattie" />
+            <img class="col-lg-6 col-md-1 p-1" src="./assets/img/simone.jpg" alt="simone" />
+            <img class="col-lg-6 col-md-1 p-1" src="./assets/img/tirailleurs.jpg" alt="tirailleurs" />
+            <img class="col-lg-6 col-md-1 p-1" src="./assets/img/wakanda.jpg" alt="wakanda forever" />
+        </article>
+
+        <!-- Section droite qui disparait en mode téléphone -->
+
+        <article id="dte" class="row p-2 justify-content-center">
+            <h5 class="text-center">Populaires en ce moment</h5>
+            <img class="col-lg-6 col-md-1 p-1" src="./assets/img/hp1.jpg" alt="harry potter1" />
+            <img class="col-lg-6 col-md-1 p-1" src="./assets/img/hp2.jpg" alt="harry potter2" />
+            <img class="col-lg-6 col-md-1 p-1" src="./assets/img/hp3.jpg" alt="harry potter3" />
+            <img class="col-lg-6 col-md-1 p-1" src="./assets/img/hp4.jpg" alt="harry potter4" />
+            <img class="col-lg-6 col-md-1 p-1" src="./assets/img/hp5.jpg" alt="harry potter5" />
+            <img class="col-lg-6 col-md-1 p-1" src="./assets/img/hp6.jpg" alt="harry potter6" />
+            <img class="col-lg-6 col-md-1 p-1" src="./assets/img/hp71.jpg" alt="harry potter7 p1" />
+            <img class="col-lg-6 col-md-1 p-1" src="./assets/img/hp72.jpg" alt="harry potter7 p2" />
+            <img class="col-lg-6 col-md-1 p-1" src="./assets/img/tcqb.jpg" alt="tout ce qui brille" />
+            <img class="col-lg-6 col-md-1 p-1" src="./assets/img/wanted.jpg" alt="wanted" />
+        </article>
+
+    </main>
+</body>
+
+</html>

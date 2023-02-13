@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="./assets/img/icone.png" type="image/x-icon">
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js" defer></script>
+    <script src="./assets/js/app2.js" defer></script>
+    <title>Cinéfil - Parcourir</title>
+</head>
+
+<body>
+    <header>
+
+        <!-- Barre de navigation -->
+
+        <nav class="navbar navig navbar-expand-lg bg-light mb-4" aria-label="Fifth navbar example">
+            <div class="container-fluid navbar-brand ">
+                <a class="" href="#"><img src="./assets/img/logo.png" alt="Logo cinéfil"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mb-lg-0 text-center">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Mes favoris</a>
+                        </li>
+                        <li class="nav-item pe-2">
+                            <a class="nav-link active" href="index2.html">Parcourir</a>
+                        </li>
+                        <li><button type="button" class="btn mt-1">Mon compte</button></li>
+                        <li><button type="button" class="btn mt-1 ms-3 me-3">M'inscrire</button></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <!-- Section formulaire -->
+
+        <section id="api">
+            <header class="fw-bold mb-3 text-center">Recherchez ce que vous voulez</header>
+            <form action="" class="text-center">
+                <input type="text" id="titre" placeholder="Titre">
+                <input type="number" id="date" placeholder="Année">
+                <select name="type" id="type">
+                    <option value="all">Voir tout</option>
+                    <option value="movie">Film</option>
+                    <option value="series">Série</option>
+                    <option value="game">Jeu</option>
+                </select> <br>
+                <button type="button" id="valider" class="btn mb-3">Valider</button> <br>
+            </form>
+            <span id="result"></span>
+        </section>
+
+        <!-- Partie où apparaîtront les résultats -->
+
+        <section id="filmTrouve" class="row justify-content-center"></section>
+
+    </main>
+
+    <!-- Footer - Pagination -->
+
+    <footer>
+
+        <nav aria-label="Page navigation example" class="container">
+            <ul class="pagination justify-content-center">
+
+                <div id="pagination" class="text-center">
+
+                </div>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>
